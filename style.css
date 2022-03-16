@@ -1,0 +1,48 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    --text-color-dark: #4a4a4a;
+    --text-color-light: #f5f5f5;
+}
+body {
+    margin: 0;
+    display: flex;
+}
+.hero {
+    width: 40vw;
+    height: 100vh;
+    background-image: url(images/hero-cat.jpg);
+    background-size: cover;
+}
+.logo {
+    margin-top: 5vh;
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 64px;
+    color: var(--text-color-light);
+    display: flex;
+    justify-content: center;
+} 
+.logo > img {
+    width: 1em;
+    height: 1em;
+    align-self: center;
+}
+.logo > h1 {
+    margin: 0;
+}
+.credit {
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    color: var(--text-color-light);
+}
+.credit > a {
+    color: var(--text-color-light);
+}
+.main {
+    width: 65vw;
+    height: 100vh;
+    margin-left: 2vw;
+}
+.head {
+    color: var(--text-color-dark);
+}
