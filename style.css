@@ -1,39 +1,44 @@
 :root {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     --color-dark: #4a4a4a;
     --color-light: #f5f5f5;
-    --color-accent: #1F4591;
+    --color-accent:  rgba(140,167,179, .5);
 }
 body {
     margin: 0;
     display: flex;
+    gap: 4vw;
 }
 .hero {
-    width: 40vw;
+    width: 45vw;
     height: 100vh;
     background-image: url(images/hero-cat.jpg);
-    background-size: cover;
+    background-size: auto;
+    background-position: 50%;
+    background-repeat: no-repeat;
 }
 .logo {
     margin-top: 5vh;
     font-family: 'Nanum Pen Script', cursive;
-    font-size: 64px;
+    font-size: 48px;
     color: var(--color-light);
+    background-color: var(--color-accent);
     display: flex;
     justify-content: center;
 } 
-.logo > img {
-    width: 1em;
-    height: 1em;
+.icon{
+    width: 1.5em;
+    height: 1.5em;
     align-self: center;
 }
-.logo > h1 {
+.title{
     margin: 0;
 }
 .credit {
     position: absolute;
     bottom: 0;
     left: 5px;
+    font-weight: lighter;
     color: var(--color-light);
 }
 .credit > a {
@@ -41,27 +46,61 @@ body {
     color: var(--color-light)
 }
 .main {
-    width: 65vw;
+    width: 55vw;
     height: 100vh;
-    margin-left: 2vw;
 }
-.head {
-    width: 45vw;
-    margin-top: 10vh;
+.header {
+    width: 50vw;
+    margin-top: 15vh;
+    margin-left: 2vw;
     color: var(--color-dark);
+}
+form {
+    height: 40vh;
+    width: 73vw;
+    margin-left: -4vw;
+    box-shadow: 1px 1px 1px 1px #bfbfbf;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+legend {
+  margin-top: 2vh;
+  margin-left: 6vw;
+  width: 100%;
+  font-size: 1.5em;
+  color: var(--color-dark);
+}
+form div {
+    width: 20vw;
+    margin-left: 6vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+label {
+    color: var(--color-dark);
+}
+input {
+    height: 25px;
 }
 #submit {
     width: 8em;
     height: 2em;
     margin-top: 3vh;
+    margin-left: 2vw;
     border-radius: 5px;
     font-size: 20px;
+    border: none;
     background-color: var(--color-accent);
-    color: var(--color-light);
+    color: var(--color-dark);
 }
 div:last-child {
     margin-top: 3vh;
 }
+.login {
+    margin-left: 2vw;
+}
 .login > a {
-    color: var(--color-accent);
+    color: var(--color-dark);
 }
