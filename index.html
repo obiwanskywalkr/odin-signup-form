@@ -7,10 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
     <link rel="stylesheet" href="./style.css">
     <title>Sign Up</title>
 </head>
@@ -49,17 +46,19 @@
             </div>
             <div>
                 <label for="pw">PASSWORD</label>
-                <input type="password" id="pw" name="pw" required>
+                <input type="password" id="pw" name="pw" onchange='checkPassword()' required>
+                <div id="message" class="message"></div>
             </div>
             <div>
                 <label for="pwConfirm">CONFIRM PASSWORD</label>
-                <input type="password" id="pwConfirm" name="pwConfirmed" required>
+                <input type="password" id="pwConfirm" name="pwConfirmed" onchange='checkPassword()' required>
             </div>
             <div></div>
       </form>
       <button id="submit" type="submit">Meow</button>
       <div class="login">Already have an account? <a href="">Log in</a> </div>
   </div>
-  <footer><!-- <a href="https://www.flaticon.com/free-icons/pet" title="pet icons">Pet icons created by Freepik - Flaticon</a> --></footer>
+  <footer></footer>
 </body>
+<script src="./script.js"></script>
 </html>
