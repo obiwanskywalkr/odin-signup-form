@@ -16,6 +16,7 @@ a {
 .hero {
     width: 45vw;
     height: 100vh;
+    min-height: 800px;
     padding: 1px;
     background-image: url(images/hero-cat.jpg);
     background-size: auto;
@@ -57,11 +58,13 @@ a {
     color: var(--color-dark);
 }
 form {
-    height: 40vh;
+    height: 35vh;
+    min-height: 210px;
     width: 63vw;
     margin-left: -4vw;
     box-shadow: 1px 1px 1px 1px #bfbfbf;
     display: flex;
+
     flex-wrap: wrap;
     column-gap: 20px;
 }
@@ -81,6 +84,7 @@ form div {
 }
 label {
     color: var(--color-dark);
+    
 }
 input {
     -webkit-appearance: none;
