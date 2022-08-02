@@ -26,36 +26,50 @@
           <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
           <h1>Sign up <em>meow</em> to get started.</h1>
       </div>
-      <form action="" method="post">
+      <form action="" method="post" novalidate>
             <legend>Let's do this!</legend>
             <div>
-                <label for="firstName">FIRST NAME</label>
-                <input type="text" id="firstName" name="firstName">
+                <label for="firstName">FIRST NAME
+                    <div id="fnReq"></div>
+                </label>
+                <input type="text" id="firstName" name="firstName" placeholder="Fast" required>
             </div>
             <div>
-                <label for="lastName">LAST NAME</label>
-                <input type="text" id="lastName" name="lastName">
+                <label for="lastName">LAST NAME
+                    <div id="lnReq"></div>
+                </label>
+                <input type="text" id="lastName" name="lastName" placeholder="Cat" required>
             </div>
             <div>
-                <label for="email">EMAIL</label>
-                <input type="email" id="email" name="email" required>
+                <label for="email">EMAIL
+                    <div id="emailReq"></div>
+                </label>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" oninput='checkEmail()' required>
+                <div id="emailError"></div>
             </div>
             <div>
-                <label for="tel">PHONE&nbspNUMBER</label>
-                <input type="tel" id="tel" name="tel">
+                <label for="tel">PHONE
+                    <div id="telReq"></div>
+                </label>
+                <input type="tel" id="tel" name="tel" placeholder="000-000-0000" oninput='checkTel()' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <div id="telError"></div>
             </div>
             <div>
-                <label for="pw">PASSWORD</label>
-                <input type="password" id="pw" name="pw" onchange='checkPassword()' required>
-                <div id="message" class="message"></div>
+                <label for="pw">PASSWORD
+                    <div id="pwReq"></div>
+                </label>
+                <input type="password" id="pw" name="pw" placeholder="Enter your password" oninput='checkPassword()' required>
+                <div id="pwMatch"></div>
             </div>
             <div>
                 <label for="pwConfirm">CONFIRM&nbspPASSWORD</label>
-                <input type="password" id="pwConfirm" name="pwConfirmed" onchange='checkPassword()' required>
+                <input type="password" id="pwConfirm" name="pwConfirmed" placeholder="Confirm your password" oninput='checkPassword()' required>
             </div>
-            <div></div>
       </form>
-      <button id="submit" type="submit">Meow</button>
+      <div class="submitBox">
+        <button id="submit" type="submit">Meow</button>
+        <div id="submitError"></div>
+      </div>
       <div class="login">Already have an account? <a href="">Log in</a> </div>
   </div>
   <footer></footer>
